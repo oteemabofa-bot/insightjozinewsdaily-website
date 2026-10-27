@@ -343,6 +343,27 @@ textarea {
   100% { transform: translateX(-18%); }
 }
 
+.live-callout {
+  padding: 32px 0 0;
+}
+
+.live-callout-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(11,61,143,0.08), rgba(255,138,0,0.06));
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 24px 28px;
+}
+
+.live-callout-wrap h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+  letter-spacing: -0.05em;
+}
+
 .content-section {
   padding: 72px 0;
 }
@@ -500,7 +521,11 @@ textarea {
 .subscribe-panel,
 .follow-panel,
 .advert-form-panel,
-.ratecard-panel {
+.ratecard-panel,
+.live-host-panel,
+.live-controls,
+.stream-schedule-card,
+.stream-setup-card {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 24px;
@@ -511,7 +536,10 @@ textarea {
 .follow-panel h2,
 .advert-form-panel h3,
 .ratecard-panel h3,
-.advertise-header h2 {
+.advertise-header h2,
+.live-host-panel h2,
+.stream-schedule-card h3,
+.stream-setup-card h3 {
   margin: 0 0 12px;
   letter-spacing: -0.05em;
 }
@@ -526,7 +554,9 @@ textarea {
 .newsletter-form input,
 .ad-form input,
 .ad-form select,
-.ad-form textarea {
+.ad-form textarea,
+.live-form input,
+.live-form select {
   width: 100%;
   background: #f8f9fb;
   border: 1px solid var(--line);
@@ -711,7 +741,8 @@ textarea {
   font-weight: 600;
 }
 
-.ad-form {
+.ad-form,
+.live-form {
   display: grid;
   gap: 18px;
   margin-top: 18px;
@@ -723,14 +754,16 @@ textarea {
   gap: 16px;
 }
 
-.ad-form label {
+.ad-form label,
+.live-form label {
   display: grid;
   gap: 8px;
   color: var(--ink);
   font-weight: 600;
 }
 
-.ad-form textarea {
+.ad-form textarea,
+.live-form textarea {
   resize: vertical;
   min-height: 120px;
 }
@@ -835,6 +868,143 @@ blockquote cite {
   color: var(--muted);
 }
 
+.page-shell {
+  padding: 48px 0 88px;
+}
+
+.live-page-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.live-page-hero h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  letter-spacing: -0.06em;
+}
+
+.live-page-hero p {
+  margin: 16px 0 0;
+  color: var(--muted);
+}
+
+.live-stage {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 22px;
+}
+
+.stream-player {
+  background: linear-gradient(135deg, var(--charcoal), #1f2c34 50%, var(--blue));
+  border-radius: 28px;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stream-player::before {
+  content: "LIVE";
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(211,47,47,0.9);
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+}
+
+.stream-overlay {
+  text-align: center;
+  max-width: 500px;
+  color: white;
+  padding: 20px;
+}
+
+.stream-overlay h3 {
+  margin: 0 0 12px;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  letter-spacing: -0.05em;
+}
+
+.stream-overlay p {
+  margin: 0;
+  color: rgba(255,255,255,0.8);
+}
+
+.live-info-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.stream-status,
+.stream-schedule-card,
+.stream-setup-card,
+.live-controls {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 22px 20px;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(211,47,47,0.1);
+  color: var(--red-dark);
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.live-controls {
+  display: grid;
+  gap: 16px;
+}
+
+.live-meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.live-meta-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.live-meta-list li strong {
+  color: var(--ink);
+}
+
+.stream-setup-card ul,
+.stream-schedule-card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.live-form {
+  margin-top: 0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -853,7 +1023,9 @@ blockquote cite {
   .spotlight-grid,
   .quote-grid,
   .advertise-grid,
-  .newsletter-wrap {
+  .newsletter-wrap,
+  .live-page-hero,
+  .live-stage {
     grid-template-columns: 1fr;
     display: grid;
   }
@@ -900,7 +1072,8 @@ blockquote cite {
   .section-head,
   .footer-wrap,
   .newsletter-form,
-  .rate-item {
+  .rate-item,
+  .live-callout-wrap {
     flex-direction: column;
     align-items: flex-start;
   }

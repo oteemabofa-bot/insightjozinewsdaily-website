@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const forms = document.querySelectorAll(".newsletter-form, .ad-form");
+  const forms = document.querySelectorAll(".newsletter-form, .ad-form, .live-form");
 
   forms.forEach((form) => {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const button = form.querySelector("button");
-      const input = form.querySelector("input");
+      const inputs = form.querySelectorAll("input, textarea, select");
 
       if (button) {
         const originalText = button.textContent;
@@ -28,9 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1800);
       }
 
-      if (input) {
-        input.value = "";
-      }
+      inputs.forEach((input) => {
+        if (input.tagName !== "SELECT") {
+          input.value = "";
+        }
+      });
     });
   });
 });

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Go live with Insight Jozi News — broadcast setup, stream information, and a live newsroom page."
+    />
+    <title>Go Live | Insight Jozi News</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html" aria-label="Insight Jozi News home">
+          <span class="brand-mark">IJN</span>
+          <span class="brand-text">
+            <strong>Insight Jozi</strong>
+            <small>News</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#latest">Latest</a>
+          <a href="index.html#dashboard">Dashboard</a>
+          <a href="index.html#analysis">Analysis</a>
+          <a href="index.html#advertise">Advertise</a>
+          <a href="live.html">Live</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <section class="live-page-hero">
+          <div>
+            <p class="eyebrow">Go live</p>
+            <h1>Broadcast from the newsroom.</h1>
+            <p>
+              Stream interviews, city briefings, and live community updates with a simple newsroom-ready setup.
+            </p>
+            <div class="hero-actions">
+              <a href="#stream-setup" class="btn btn-primary">Set up stream</a>
+              <a href="index.html" class="btn btn-secondary">Back to homepage</a>
+            </div>
+          </div>
+
+          <div class="live-host-panel">
+            <p class="eyebrow">Next broadcast</p>
+            <h2>City voices live</h2>
+            <p>Thursday • 7:30 PM • Johannesburg</p>
+            <div class="social-list">
+              <a href="#" class="social-btn social-orange">Facebook Live</a>
+              <a href="#" class="social-btn social-blue">YouTube</a>
+              <a href="#" class="social-btn social-red">X Live</a>
+              <a href="#" class="social-btn social-charcoal">Instagram</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="live-stage">
+          <div class="stream-player">
+            <div class="stream-overlay">
+              <h3>Live stream preview</h3>
+              <p>Use this area for your embedded live broadcast, OBS stream, or third-party video player URL.</p>
+            </div>
+          </div>
+
+          <div class="live-info-grid">
+            <div class="stream-status">
+              <span class="status-pill">Status: Live schedule</span>
+              <h3>Broadcast status</h3>
+              <ul class="live-meta-list">
+                <li><span>Platform</span><strong>YouTube / Facebook / RTMP</strong></li>
+                <li><span>Schedule</span><strong>Thu • 7:30 PM</strong></li>
+                <li><span>Format</span><strong>News desk + community Q&amp;A</strong></li>
+              </ul>
+            </div>
+
+            <div class="live-controls">
+              <h3>Quick setup</h3>
+              <div class="field-row">
+                <label>
+                  <span>Stream title</span>
+                  <input type="text" placeholder="City Voices Live" />
+                </label>
+                <label>
+                  <span>Platform</span>
+                  <select>
+                    <option>YouTube Live</option>
+                    <option>Facebook Live</option>
+                    <option>Vimeo</option>
+                    <option>Custom RTMP</option>
+                  </select>
+                </label>
+              </div>
+              <button class="btn btn-primary" type="button">Prepare broadcast</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="stream-setup" class="content-section" style="padding-top: 48px;">
+          <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px;">
+            <div class="stream-setup-card">
+              <h3>How to go live</h3>
+              <ul>
+                <li>Open OBS Studio or Streamlabs.</li>
+                <li>Connect your YouTube/Facebook/Vimeo account or use custom RTMP settings.</li>
+                <li>Paste the stream key and server URL from your platform.</li>
+                <li>Set up your scene with a newsroom branding overlay.</li>
+                <li>Click Start Streaming when ready.</li>
+              </ul>
+            </div>
+
+            <div class="stream-schedule-card">
+              <h3>Broadcast schedule</h3>
+              <ul>
+                <li>Monday: Public affairs update</li>
+                <li>Wednesday: Community voices</li>
+                <li>Thursday: City briefings</li>
+                <li>Saturday: Culture & lifestyle</li>
+                <li>Sunday: Weekly wrap-up</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section" style="padding-top: 0;">
+          <div class="container">
+            <div class="stream-schedule-card">
+              <h3>Broadcast request form</h3>
+              <form class="live-form">
+                <div class="field-row">
+                  <label>
+                    <span>Presenter name</span>
+                    <input type="text" placeholder="Your name" />
+                  </label>
+                  <label>
+                    <span>Topic</span>
+                    <input type="text" placeholder="Example: City planning update" />
+                  </label>
+                </div>
+
+                <div class="field-row">
+                  <label>
+                    <span>Preferred date</span>
+                    <input type="date" />
+                  </label>
+                  <label>
+                    <span>Stream platform</span>
+                    <select>
+                      <option>Facebook Live</option>
+                      <option>YouTube Live</option>
+                      <option>Instagram Live</option>
+                      <option>Custom RTMP</option>
+                    </select>
+                  </label>
+                </div>
+
+                <label>
+                  <span>Notes</span>
+                  <textarea rows="5" placeholder="Add interview notes, guest names, or production details"></textarea>
+                </label>
+
+                <button type="submit" class="btn btn-primary">Send live request</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <a class="brand footer-brand" href="index.html">
+            <span class="brand-mark">IJN</span>
+            <span class="brand-text">
+              <strong>Insight Jozi</strong>
+              <small>News</small>
+            </span>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#latest">Latest</a>
+          <a href="index.html#dashboard">Dashboard</a>
+          <a href="index.html#advertise">Advertise</a>
+          <a href="live.html">Live</a>
+        </div>
+        <p>© 2026 InsightJoziNews.org</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
