@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const forms = document.querySelectorAll(".newsletter-form, .ad-form, .live-form");
+  const forms = document.querySelectorAll(".newsletter-form, .ad-form");
 
   forms.forEach((form) => {
     form.addEventListener("submit", (event) => {

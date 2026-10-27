@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Insight Jozi News — local reporting, analysis, community stories, subscriptions, and advertising from Johannesburg and beyond."
+      content="Insight Jozi News — a modern digital newsroom covering Johannesburg, local business, culture, and community stories."
     />
-    <title>Insight Jozi News | InsightJoziNews.org</title>
+    <title>Insight Jozi News | Media & Live Newsroom</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,12 +28,12 @@
         </a>
 
         <nav class="main-nav" aria-label="Main navigation">
-          <a href="index.html">Home</a>
+          <a href="#top">Home</a>
           <a href="#latest">Latest</a>
-          <a href="#dashboard">Dashboard</a>
-          <a href="#analysis">Analysis</a>
+          <a href="#live">Live</a>
+          <a href="#schedule">Schedule</a>
           <a href="#advertise">Advertise</a>
-          <a href="live.html">Live</a>
+          <a href="live.html">Studio</a>
         </nav>
 
         <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
@@ -41,34 +41,38 @@
     </header>
 
     <main id="top">
-      <section class="hero">
+      <section class="hero hero-newsroom">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Johannesburg • Daily briefing</p>
-            <h1>Independent local journalism for a changing city.</h1>
+            <div class="news-badges">
+              <span class="top-pill">Live now</span>
+              <span class="top-pill alt">Johannesburg</span>
+            </div>
+            <p class="eyebrow">Daily newsroom briefing</p>
+            <h1>Independent reporting for the city, the stories, and the people shaping it.</h1>
             <p class="lede">
-              InsightJoziNews.org delivers trusted reporting, sharp commentary, and the stories that define everyday life in Johannesburg and beyond.
+              InsightJoziNews.org is a local digital newsroom covering public affairs, business, culture, community life, and the issues affecting everyday Johannesburg.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#latest">Read latest</a>
               <a class="btn btn-secondary" href="live.html">Watch live</a>
             </div>
-            <ul class="hero-meta" aria-label="News stats">
+            <ul class="hero-meta" aria-label="Newsroom stats">
               <li><strong>24/7</strong><span>Breaking updates</span></li>
-              <li><strong>120+</strong><span>Local voices</span></li>
+              <li><strong>30+</strong><span>Weekly stories</span></li>
               <li><strong>3.8k</strong><span>Daily readers</span></li>
             </ul>
           </div>
 
-          <aside class="hero-feature">
-            <div class="feature-badge">Front page</div>
-            <h2>Joburg’s future depends on how it listens, plans, and grows.</h2>
+          <aside class="hero-feature newsroom-feature">
+            <div class="feature-badge">On air</div>
+            <h2>City voices live: what the next chapter of Joburg looks like.</h2>
             <p>
-              From transport and housing to culture and business, we cover the issues shaping the city’s next chapter.
+              Interviews, local updates, and community perspective from the people living, building, and leading in the city.
             </p>
             <div class="feature-footer">
-              <span>By Editorial Desk</span>
-              <time datetime="2026-10-27">27 Oct 2026</time>
+              <span>Hosted by newsroom desk</span>
+              <time datetime="2026-10-27">7:30 PM</time>
             </div>
           </aside>
         </div>
@@ -76,20 +80,45 @@
 
       <section class="ticker">
         <div class="container ticker-inner">
-          <span>Live</span>
+          <span>Breaking</span>
           <div class="ticker-track">
-            <p>City transport review • Housing challenge • Youth enterprise growth • Creative economy revival • Business recovery update</p>
+            <p>City planning review • Community safety debate • Business recovery update • Creative economy revival • Housing access conversations</p>
           </div>
         </div>
       </section>
 
-      <section class="live-callout">
-        <div class="container live-callout-wrap">
+      <section id="live" class="content-section media-highlight">
+        <div class="container section-head compact-head">
           <div>
-            <p class="eyebrow">Now streaming</p>
-            <h2>Live newsroom coverage</h2>
+            <p class="eyebrow">Live desk</p>
+            <h2>Watch the newsroom</h2>
           </div>
-          <a href="live.html" class="btn btn-primary">Go live page</a>
+          <a href="live.html" class="section-link">Open studio</a>
+        </div>
+
+        <div class="container live-show-grid">
+          <div class="video-panel">
+            <div class="video-placeholder">
+              <div class="video-badge">LIVE</div>
+              <div class="video-content">
+                <h3>City voices live</h3>
+                <p>Live interview • Community briefing • Local analysis</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="live-side-panel">
+            <div class="live-mini-block">
+              <span class="mini-label">Tonight</span>
+              <h3>Public affairs roundtable</h3>
+              <p>City planning, economic pressure, and the communities most affected.</p>
+            </div>
+            <div class="live-mini-block">
+              <span class="mini-label">Coming up</span>
+              <h3>Culture and community</h3>
+              <p>Artists, entrepreneurs, and neighborhood leaders shaping the city narrative.</p>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -195,6 +224,43 @@
         </div>
       </section>
 
+      <section id="schedule" class="content-section schedule-section">
+        <div class="container section-head">
+          <div>
+            <p class="eyebrow">Schedule</p>
+            <h2>Broadcast timetable</h2>
+          </div>
+        </div>
+
+        <div class="container schedule-grid">
+          <div class="schedule-card">
+            <span class="schedule-day">Mon</span>
+            <h3>Public affairs update</h3>
+            <p>6:00 PM</p>
+          </div>
+          <div class="schedule-card">
+            <span class="schedule-day">Wed</span>
+            <h3>Community voices</h3>
+            <p>7:00 PM</p>
+          </div>
+          <div class="schedule-card highlight-card">
+            <span class="schedule-day">Thu</span>
+            <h3>City voices live</h3>
+            <p>7:30 PM</p>
+          </div>
+          <div class="schedule-card">
+            <span class="schedule-day">Sat</span>
+            <h3>Culture & lifestyle</h3>
+            <p>4:00 PM</p>
+          </div>
+          <div class="schedule-card">
+            <span class="schedule-day">Sun</span>
+            <h3>Weekly wrap-up</h3>
+            <p>8:00 PM</p>
+          </div>
+        </div>
+      </section>
+
       <section class="subscribe-wrap">
         <div class="container subscribe-grid">
           <div class="subscribe-panel">
@@ -221,29 +287,29 @@
         </div>
       </section>
 
-      <section id="analysis" class="content-section">
+      <section class="content-section host-section">
         <div class="container section-head">
           <div>
-            <p class="eyebrow">Analysis</p>
-            <h2>Context behind the headlines</h2>
+            <p class="eyebrow">Hosts</p>
+            <h2>Meet the newsroom</h2>
           </div>
         </div>
 
-        <div class="container analysis-grid">
-          <article class="analysis-card">
-            <span class="badge">Commentary</span>
-            <h3>Why trust matters more than infrastructure in the next growth cycle</h3>
-            <p>Policy can only go so far without the participation of the communities it aims to serve.</p>
+        <div class="container hosts-grid">
+          <article class="host-card">
+            <div class="host-avatar avatar-one"></div>
+            <h3>Leah Mokoena</h3>
+            <p>News anchor</p>
           </article>
-          <article class="analysis-card">
-            <span class="badge">Briefing</span>
-            <h3>Five shifts that could reshape everyday life across the city</h3>
-            <p>From labour to mobility, fundamental systems are being recalibrated.</p>
+          <article class="host-card">
+            <div class="host-avatar avatar-two"></div>
+            <h3>Thabo Ndlovu</h3>
+            <p>Public affairs host</p>
           </article>
-          <article class="analysis-card">
-            <span class="badge">Data</span>
-            <h3>What the latest numbers say about youth work and informal livelihoods</h3>
-            <p>Recovery is uneven, but resilience remains strong across many communities.</p>
+          <article class="host-card">
+            <div class="host-avatar avatar-three"></div>
+            <h3>Sindiswa Khumalo</h3>
+            <p>Culture & community editor</p>
           </article>
         </div>
       </section>
@@ -334,26 +400,6 @@
         </div>
       </section>
 
-      <section id="culture" class="content-section">
-        <div class="container section-head">
-          <div>
-            <p class="eyebrow">Culture & community</p>
-            <h2>Voices from the city</h2>
-          </div>
-        </div>
-
-        <div class="container quote-grid">
-          <blockquote>
-            “The city is not a backdrop. It is the story itself. Reporting needs to reflect lived realities and community intelligence.”
-            <cite>— Editorial team</cite>
-          </blockquote>
-          <div class="mini-article">
-            <h3>Neighborhood storytelling is becoming the front line of public journalism</h3>
-            <p>Residents are documenting challenges and opportunities in real time, changing how the city is seen.</p>
-          </div>
-        </div>
-      </section>
-
       <section id="newsletter" class="newsletter">
         <div class="container newsletter-wrap">
           <div>
@@ -382,10 +428,10 @@
         </div>
         <div class="footer-links">
           <a href="#latest">Latest</a>
-          <a href="#dashboard">Dashboard</a>
-          <a href="#analysis">Analysis</a>
+          <a href="#live">Live</a>
+          <a href="#schedule">Schedule</a>
           <a href="#advertise">Advertise</a>
-          <a href="live.html">Live</a>
+          <a href="live.html">Studio</a>
         </div>
         <p>© 2026 InsightJoziNews.org</p>
       </div>
