@@ -8,26 +8,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const form = document.querySelector(".newsletter-form");
+  const forms = document.querySelectorAll(".newsletter-form, .ad-form");
 
-  if (form) {
+  forms.forEach((form) => {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const button = form.querySelector("button");
       const input = form.querySelector("input");
 
-      if (!input || !button) return;
+      if (button) {
+        const originalText = button.textContent;
+        button.textContent = "Submitted";
+        button.disabled = true;
 
-      const value = input.value.trim();
-      if (!value) {
-        input.focus();
-        return;
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.disabled = false;
+          form.reset();
+        }, 1800);
       }
 
-      button.textContent = "Subscribed";
-      button.disabled = true;
-      input.value = "";
-      input.placeholder = "You’re on the list";
+      if (input) {
+        input.value = "";
+      }
     });
-  }
+  });
 });
